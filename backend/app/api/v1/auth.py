@@ -39,7 +39,7 @@ async def login_access_token(
         key="access_token",
         value=f"Bearer {access_token}",
         httponly=True,
-        secure=True,  # Production only via https. For dev, localhost is considered secure context by browsers usually, but might need adjustment.
+        secure=False,  # Set to False for local development without HTTPS
         samesite="lax",
         max_age=settings.ACCESS_TOKEN_EXPIRE_MINUTES * 60,
     )

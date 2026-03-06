@@ -5,50 +5,20 @@ import { motion, AnimatePresence } from "framer-motion"
 import { ProjectCard } from "./ProjectCard"
 import { Input } from "./ui/input"
 import { Button } from "./ui/button"
-import { Search, Filter } from "lucide-react"
-
-const STATIC_PROJECTS = [
-    {
-        id: "cognisys-orbit",
-        title: "Cognisys Orbit",
-        description: "Plataforma empresarial de gestión de agentes de IA con arquitectura multi-tenant. Desarrollada con Rust y React, implementa seguridad avanzada, RBAC y comunicación en tiempo real mediante WebSockets.",
-        tags: ["Rust", "React", "WebSockets", "Multi-tenant", "RBAC"],
-        priority: 1,
-        link: "#",
-        metadata_json: { github: "#" }
-    },
-    {
-        id: "port-scanner",
-        title: "Escáner de Puertos",
-        description: "Herramienta de análisis técnico para auditoría de redes. Permite identificar servicios activos y posibles vulnerabilidades de forma rápida y eficiente.",
-        tags: ["Python", "Networking", "Security", "CLI"],
-        priority: 0,
-        link: "#",
-        metadata_json: { github: "#" }
-    },
-    {
-        id: "pyme-web",
-        title: "Sitios Web para PYMES",
-        description: "Desarrollo de soluciones web funcionales y optimizadas para pequeñas empresas. Enfoque en presencia digital clara, identidad visual y rendimiento.",
-        tags: ["Next.js", "Tailwind CSS", "SEO", "Responsive"],
-        priority: 0,
-        link: "#",
-        metadata_json: { github: "#" }
-    }
-]
+import { Search, Filter, Loader2 } from "lucide-react"
+import { useQuery } from "@tanstack/react-query"
+import { projectsService } from "@/services/projects"
 
 export function ProjectGrid() {
     const [search, setSearch] = useState("")
     const [sortBy, setSortBy] = useState("priority")
 
-    const projects = STATIC_PROJECTS.filter(p =>
-        p.title.toLowerCase().includes(search.toLowerCase()) ||
-        p.description.toLowerCase().includes(search.toLowerCase()) ||
-        p.tags.some(t => t.toLowerCase().includes(search.toLowerCase()))
-    ).sort((a, b) => {
-        if (sortBy === "priority") return b.priority - a.priority
-        return 0
+    const { data: apiProjects, isLoading, error } = useQuery({
+        queryKey: ['projects', search, sortBy],
+        queryFn: () => projectsService.getAll(),
     })
+
+    const projects = apiProjects || []
 
     return (
         <section className="w-full space-y-12 pb-20">
@@ -86,7 +56,17 @@ export function ProjectGrid() {
             </div>
 
             <AnimatePresence mode="popLayout">
-                {projects.length > 0 ? (
+                {isLoading ? (
+                    <div className="flex flex-col items-center justify-center py-40">
+                        <Loader2 className="w-12 h-12 text-primary animate-spin mb-4" />
+                        <p className="text-muted-foreground animate-pulse">Sincronizando sistemas...</p>
+                    </div>
+                ) : error ? (
+                    <div className="text-center py-40 bg-destructive/5 rounded-[3rem] border border-dashed border-destructive/20 text-destructive">
+                        <h3 className="text-2xl font-bold mb-2">Error de conexión</h3>
+                        <p>No se pudo establecer conexión con el núcleo del sistema.</p>
+                    </div>
+                ) : projects.length > 0 ? (
                     <motion.div
                         layout
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"

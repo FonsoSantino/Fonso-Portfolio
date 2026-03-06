@@ -5,9 +5,12 @@ export interface Project {
     title: string;
     description?: string;
     link?: string;
+    tags: string[];
+    priority: number;
     user_id: string;
     created_at: string;
     updated_at: string;
+    metadata_json?: any;
 }
 
 export interface ProjectCreate {

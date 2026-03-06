@@ -31,10 +31,11 @@ Ensure these are set in your production environment (Vercel, Railway, etc.):
 ## 3. Deploying Frontend (Vercel)
 
 1. Connect your repository to Vercel.
-2. Set the "Root Directory" to `frontend`.
-3. Vercel will auto-detect Next.js settings.
-4. Add `NEXT_PUBLIC_API_URL` environment variable.
-5. Deploy.
+2. In the Vercel Dashboard, go to **Project Settings**.
+3. Set the **Root Directory** to `frontend`.
+4. Vercel will then use the `vercel.json` located within that directory.
+5. Add the `NEXT_PUBLIC_API_URL` environment variable pointing to your deployed backend.
+6. Deploy.
 
 ---
 

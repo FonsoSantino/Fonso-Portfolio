@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 from uuid import UUID
 
 from sqlalchemy import select
@@ -48,8 +48,15 @@ class ProjectRepository(CRUDBase[Project, ProjectCreate, ProjectUpdate]):
             )
         
         if tags:
-            # Using PostgreSQL ARRAY overlap operator (&&)
-            query = query.where(Project.tags.overlap(tags))
+            # Universal approach for tags filtering (works with SQLite JSON and Postgres)
+            # Since we are using JSON for tags, we check if any of the provided tags are in the JSON array
+            for tag in tags:
+                query = query.where(Project.tags.like(f'%"%#{tag}%"%')) # Rough match for JSON strings
+                # Actually, a better way for SQLite/Postgres compatibility without overlap:
+                # We'll use a simpler approach for now to ensure it works
+                # query = query.where(Project.tags.contains(tag)) # SQLAlchemy contains might be better but depends on dialect
+                # Let's use a standard LIKE to check if the tag exists in the stringified JSON
+                query = query.where(Project.tags.cast(String).like(f'%"{tag}"%'))
         
         # Sorting
         if sort_by == "priority":

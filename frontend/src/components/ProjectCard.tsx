@@ -8,7 +8,7 @@ import { ExternalLink, Github } from "lucide-react"
 interface Project {
     id: string
     title: string
-    description: string
+    description?: string
     link?: string
     tags: string[]
     priority: number
