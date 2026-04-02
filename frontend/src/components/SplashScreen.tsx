@@ -7,11 +7,15 @@ export function SplashScreen({ finishLoading }: { finishLoading: () => void }) {
     const [isMounted, setIsMounted] = useState(false)
 
     useEffect(() => {
+        // Scroll Lock
+        document.body.style.overflow = "hidden"
+        
         const timeout = setTimeout(() => setIsMounted(true), 10)
         const finishTimeout = setTimeout(() => finishLoading(), 2500)
         return () => {
             clearTimeout(timeout)
             clearTimeout(finishTimeout)
+            document.body.style.overflow = ""
         }
     }, [finishLoading])
 

@@ -13,7 +13,8 @@ export function HeroSection() {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
     const { scrollY } = useScroll()
     
-    const yParallax = useTransform(scrollY, [0, 500], [0, 150])
+    const opacityHero = useTransform(scrollY, [0, 300], [1, 0])
+    const pointerEventsHero = useTransform(scrollY, value => value > 200 ? "none" : "auto")
 
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
@@ -48,7 +49,7 @@ export function HeroSection() {
     }
 
     return (
-        <section ref={containerRef} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 perspective-1000">
+        <section ref={containerRef} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 perspective-1000 z-[50]">
             {/* Cinematic Background */}
             <div className="absolute inset-0 z-0 overflow-hidden">
                 {/* Mobile Fallback */}
@@ -88,7 +89,7 @@ export function HeroSection() {
             </div>
 
             <motion.div 
-                style={{ y: yParallax }}
+                style={{ opacity: opacityHero, pointerEvents: pointerEventsHero as any }}
                 className="container relative z-20 px-6 mx-auto text-center"
             >
                 <motion.div
@@ -150,19 +151,19 @@ export function HeroSection() {
                                 asChild
                                 className="h-16 md:h-20 px-8 md:px-12 rounded-full bg-primary hover:bg-primary/90 text-white dark:text-black font-black uppercase italic tracking-[0.2em] md:tracking-[0.4em] shadow-[0_20px_50px_rgba(var(--primary-rgb),0.3)] hover:-translate-y-2 transition-all duration-500 w-full md:w-auto text-[10px] md:text-xs"
                             >
-                                <a href="#projects" className="flex items-center">
+                                <Link href="/projects" className="flex items-center">
                                     {t('hero.cta_projects')}
                                     <ArrowRight className="ml-3 md:ml-4 w-4 h-4 md:w-5 md:h-5" />
-                                </a>
+                                </Link>
                             </Button>
                             <Button
                                 asChild
                                 variant="outline"
                                 className="h-16 md:h-20 px-8 md:px-12 rounded-full bg-white/5 backdrop-blur-xl border-zinc-200 dark:border-white/10 hover:border-primary/50 text-foreground dark:text-white font-black uppercase italic tracking-[0.2em] md:tracking-[0.4em] hover:-translate-y-2 transition-all duration-500 w-full md:w-auto text-[10px] md:text-xs pointer-events-auto"
                             >
-                                <a href="#contact">
+                                <Link href="/contact">
                                     {t('hero.cta_contact')}
-                                </a>
+                                </Link>
                             </Button>
                         </div>
                     </motion.div>

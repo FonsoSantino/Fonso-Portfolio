@@ -27,7 +27,7 @@ export const AboutSection = () => {
     ]
 
     return (
-        <section className="relative z-20 w-full py-16 md:py-32 px-4 overflow-hidden">
+        <section className="relative z-10 w-full py-16 md:py-32 px-4 overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     <motion.div
