@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { useSearchParams, useRouter } from "next/navigation"
+import { useRouter } from "next/navigation"
 import { ProjectCard } from "./ProjectCard"
 import { Input } from "./ui/input"
 import { Button } from "./ui/button"
@@ -19,7 +19,6 @@ import { FEATURED_PROJECTS } from "@/data/projects"
 
 export function ProjectGrid() {
     const { t } = useLanguage();
-    const searchParams = useSearchParams()
     const router = useRouter()
     const [selectedProject, setSelectedProject] = useState<any | null>(null)
     const [activeFilter, setActiveFilter] = useState("ALL")
