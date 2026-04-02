@@ -3,7 +3,10 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ThemeProvider } from "@/components/theme-provider";
+import { LanguageProvider } from "@/context/LanguageContext";
 import { useState } from 'react';
+
+import { CartProvider } from "@/context/CartContext";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
     // Ensure QueryClient is created once per client lifecycle
@@ -21,11 +24,15 @@ export default function Providers({ children }: { children: React.ReactNode }) {
         <QueryClientProvider client={queryClient}>
             <ThemeProvider
                 attribute="class"
-                defaultTheme="system"
+                defaultTheme="light"
                 enableSystem
                 disableTransitionOnChange
             >
-                {children}
+                <LanguageProvider>
+                    <CartProvider>
+                        {children}
+                    </CartProvider>
+                </LanguageProvider>
             </ThemeProvider>
             <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>

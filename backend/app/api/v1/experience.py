@@ -10,7 +10,6 @@ router = APIRouter()
 @router.get("/", response_model=List[ExperienceOut])
 async def read_experiences(
     session: SessionDep,
-    current_user: CurrentUser,
     experience_service: ExperienceService = Depends(get_experience_service),
     skip: int = 0,
     limit: int = 100,
@@ -19,7 +18,7 @@ async def read_experiences(
     Retrieve experiences.
     """
     return await experience_service.get_multi(
-        session, user_id=current_user.id, skip=skip, limit=limit
+        session, user_id=None, skip=skip, limit=limit
     )
 
 

@@ -8,5 +8,8 @@ passlib[bcrypt]
 python-jose[cryptography]
 openai
 slowapi
+sqlalchemy>=2.0.0
+alembic
+aiosqlite
 
 

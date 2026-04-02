@@ -1,0 +1,40 @@
+[
+  {
+    "id": "p1",
+    "name": "Basic",
+    "price": 29,
+    "features": [
+      "Access to Gym Floor",
+      "Standard Locker Room",
+      "Free Weights Area",
+      "Cardio Zone"
+    ],
+    "highlight": false
+  },
+  {
+    "id": "p2",
+    "name": "Pro",
+    "price": 59,
+    "features": [
+      "24/7 Gym Access",
+      "Unlimited Classes",
+      "1 Personal Training Session/mo",
+      "Premium Locker Room",
+      "Full Spa Access"
+    ],
+    "highlight": true
+  },
+  {
+    "id": "p3",
+    "name": "Elite",
+    "price": 99,
+    "features": [
+      "Everything in Pro",
+      "Unlimited Personal Training",
+      "Custom Nutrition Plan",
+      "Private VIP Lounge",
+      "Monthly Body Analysis"
+    ],
+    "highlight": false
+  }
+]

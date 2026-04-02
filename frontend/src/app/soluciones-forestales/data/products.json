@@ -1,0 +1,170 @@
+[
+  {
+    "id": "1",
+    "name": "Motosierra Stihl MS 250",
+    "category": "manual-tools",
+    "subCategory": "Motosierras",
+    "price": 450,
+    "description": "Ideal para el mantenimiento de fincas y corte de leña. Potente y ligera.",
+    "image": "https://static.wixstatic.com/media/720ec0_66cc2da9ac2d44b49b94ffb53deeaa4e~mv2.jpg/v1/fill/w_1000,h_667,al_c,q_85,usm_0.66_1.00_0.01/720ec0_66cc2da9ac2d44b49b94ffb53deeaa4e~mv2.jpg",
+    "specs": [
+      "Cilindrada: 45.4 cm³",
+      "Potencia: 2.3 kW",
+      "Peso: 4.6 kg"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Motosierra Husqvarna 450e II",
+    "category": "manual-tools",
+    "subCategory": "Motosierras",
+    "price": 520,
+    "description": "Sierra polivalente potente para personas que valoran las cualidades profesionales.",
+    "image": "https://cdn.manomano.com/images/images_products/438338/P/12640919_1.jpg",
+    "specs": [
+      "Cilindrada: 50.2 cm³",
+      "Potencia: 2.4 kW",
+      "Peso: 4.9 kg"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Motoguadaña Stihl FS 120",
+    "category": "manual-tools",
+    "subCategory": "Motoguadañas",
+    "price": 380,
+    "description": "Para trabajos en agricultura y jardinería. Manillar de dos manos.",
+    "image": "https://agroexito.co/wp-content/uploads/2024/03/120-1.jpg",
+    "specs": [
+      "Cilindrada: 30.8 cm³",
+      "Potencia: 1.3 kW",
+      "Peso: 6.3 kg"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Motoguadaña Husqvarna 535Rj",
+    "category": "manual-tools",
+    "subCategory": "Motoguadañas",
+    "price": 410,
+    "description": "Desbrozadora de la clase de 35 cc construida para un uso profesional exigente.",
+    "image": "https://www.joymobile.co.il/wp-content/uploads/2023/12/%D7%A2%D7%95%D7%AA%D7%A7-%D7%A9%D7%9C-600x600-2023-12-10T181538.036.png",
+    "specs": [
+      "Cilindrada: 34.6 cm³",
+      "Potencia: 1.6 kW",
+      "Peso: 6.0 kg"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Motosierra de Poda Echo CS-2511WES",
+    "category": "manual-tools",
+    "subCategory": "Motosierras",
+    "price": 395,
+    "description": "La motosierra de poda más ligera y potente del mercado.",
+    "image": "https://www.taller-reyes.com/wp-content/uploads/2021/09/motosierra-poda-echo-cs-2511-wes-30-1.jpg",
+    "specs": [
+      "Cilindrada: 25.0 cm³",
+      "Potencia: 1.1 kW",
+      "Peso: 2.3 kg"
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Desbrozadora Forestal Stihl FS 460",
+    "category": "manual-tools",
+    "subCategory": "Motoguadañas",
+    "price": 950,
+    "description": "Para trabajos de aclarado en monte y mantenimiento de carreteras.",
+    "image": "https://garbelcomerce.com/wp-content/uploads/2024/01/FS-460.png",
+    "specs": [
+      "Cilindrada: 45.6 cm³",
+      "Potencia: 2.2 kW",
+      "Peso: 8.5 kg"
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Cosechadora John Deere S780",
+    "category": "heavy-machinery",
+    "subCategory": "Cosechadoras",
+    "price": 450000,
+    "description": "Máxima eficiencia y tecnología en cosecha de granos.",
+    "image": "https://www.deere.com.ar/assets/images/region-3/products/harvesters/s-series/s780/s780_1_estudio_large_6f8a438af505d7f683e8087ee09066d015551020.jpg",
+    "specs": [
+      "Motor: 13.5L",
+      "Potencia: 473 hp",
+      "Tanque: 14,100 L"
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Tractor John Deere 8R 410",
+    "category": "heavy-machinery",
+    "subCategory": "Tractores",
+    "price": 320000,
+    "description": "Potencia y versatilidad para las tareas más exigentes del campo.",
+    "image": "https://th.bing.com/th/id/R.fe6485035fb42aefe43a154668e6bc21?rik=3WR7PP87YhR28Q&pid=ImgRaw&r=0",
+    "specs": [
+      "Motor: 9.0L",
+      "Potencia: 410 hp",
+      "Transmisión: e23"
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Sembradora John Deere 1775NT",
+    "category": "heavy-machinery",
+    "subCategory": "Sembradoras",
+    "price": 180000,
+    "description": "Precisión extrema en la siembra con tecnología ExactEmerge.",
+    "image": "https://www.deere.com/assets/images/region-4/products/planting-equipment/db-planters/db120-48-row-30-planter/db120_48r30_planter_r4d031295_large_320e8d2ec1700e232bafa9054a6eef3974ef4f02.jpg",
+    "specs": [
+      "Filas: 16-24",
+      "Espaciamiento: 76 cm",
+      "Capacidad: 2,500 L"
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Cosechadora Forestal John Deere 1270G",
+    "category": "heavy-machinery",
+    "subCategory": "Cosechadoras",
+    "price": 580000,
+    "description": "Especializada en terrenos difíciles y alta productividad forestal.",
+    "image": "https://www.deere.com.au/assets/images/region-2/products/wheeled-harvesters/1270g/1270g_8w_fromside_large_8b014ca99f2ad93edebda8cfbfaaa466269e9114.jpg",
+    "specs": [
+      "Motor: 9.0L",
+      "Potencia: 268 hp",
+      "Grúa: CH7"
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Forwarder John Deere 1910G",
+    "category": "heavy-machinery",
+    "subCategory": "Maquinaria Pesada",
+    "price": 420000,
+    "description": "Transporte de troncos eficiente con gran capacidad de carga.",
+    "image": "https://th.bing.com/th/id/R.e04780553b765c135a87ddfae8476e73?rik=%2fgqMcXEvWG5HCQ&riu=http%3a%2f%2fwww.nuhn.de%2ffileadmin%2fuser_upload%2fforstmaschinen%2fneumaschinen%2fjohn-deere-1910g%2f1910G-2016-005.jpg&ehk=3VT%2bWfsJxL6Ks2FKIdqLOl%2bzxZ6jRVs0Rg1KqvPc3Rw%3d&risl=&pid=ImgRaw&r=0",
+    "specs": [
+      "Motor: 9.0L",
+      "Carga útil: 19,000 kg",
+      "Potencia: 268 hp"
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Skidder John Deere 948L-II",
+    "category": "heavy-machinery",
+    "subCategory": "Maquinaria Pesada",
+    "price": 350000,
+    "description": "Potente arrastre para las condiciones forestales más rigurosas.",
+    "image": "https://www.deere.com/assets/images/common/products/skidders/984L-II/948l_ii_grapple_skidder_forestry_r4x000188_rrd_1366x768_large_e20f0cb5283667c5332b59206a814a242d3758e6.jpg",
+    "specs": [
+      "Motor: 9.0L",
+      "Potencia: 300 hp",
+      "Tracción: 4x4"
+    ]
+  }
+]

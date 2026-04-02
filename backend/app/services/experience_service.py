@@ -13,7 +13,7 @@ class ExperienceService:
         self.experience_repo = experience_repo
 
     async def get_multi(
-        self, db: AsyncSession, user_id: UUID, skip: int = 0, limit: int = 100
+        self, db: AsyncSession, user_id: Optional[UUID] = None, skip: int = 0, limit: int = 100
     ) -> List[Experience]:
         return await self.experience_repo.get_multi_by_owner(
             db, owner_id=user_id, skip=skip, limit=limit

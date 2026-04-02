@@ -1,0 +1,106 @@
+[
+  {
+    "id": "lx1",
+    "name": "Aurelius Chronograph",
+    "category": "Watches",
+    "price": 8500,
+    "description": "Exquisite mechanical movement housed in a hand-polished titanium case. A testament to timeless precision.",
+    "image": "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=2000&auto=format&fit=crop",
+    "details": {
+      "Movement": "Automatic Swiss",
+      "Material": "Grade 5 Titanium",
+      "Strap": "Alligator Leather"
+    }
+  },
+  {
+    "id": "lx2",
+    "name": "Celestial Solitaire",
+    "category": "Jewelry",
+    "price": 12400,
+    "description": "A flawless 2-carat diamond set in 18k white gold. Engineered to capture the light of a thousand stars.",
+    "image": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=2000&auto=format&fit=crop",
+    "details": {
+      "Carat": "2.0 VVS1",
+      "Metal": "18k White Gold",
+      "Cut": "Brilliant"
+    }
+  },
+  {
+    "id": "lx3",
+    "name": "Nocturne Silk Scarf",
+    "category": "Accessories",
+    "price": 450,
+    "description": "Hand-rolled Italian silk featuring a minimalist geometric pattern inspired by midnight shadows.",
+    "image": "https://i.pinimg.com/1200x/f3/a4/46/f3a4466a275992df2dd52df3f5f4a5d4.jpg",
+    "details": {
+      "Material": "100% Mulberry Silk",
+      "Origin": "Como, Italy",
+      "Dimensions": "90x90 cm"
+    }
+  },
+  {
+    "id": "lx4",
+    "name": "Lumiere Gold Bracelet",
+    "category": "Jewelry",
+    "price": 3200,
+    "description": "Sleek, sculptural 18k yellow gold bracelet designed to be worn as a second skin.",
+    "image": "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?q=80&w=2000&auto=format&fit=crop",
+    "details": {
+      "Metal": "18k Yellow Gold",
+      "Finish": "High Gloss",
+      "Weight": "42g"
+    }
+  },
+  {
+    "id": "lx5",
+    "name": "Exodus Leather Tote",
+    "category": "Accessories",
+    "price": 2800,
+    "description": "Full-grain calfskin leather, structured yet supple. The ultimate companion for the global voyager.",
+    "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=2000&auto=format&fit=crop",
+    "details": {
+      "Material": "Full-grain Calfskin",
+      "Hardware": "Brushed Brass",
+      "Lining": "Suede"
+    }
+  },
+  {
+    "id": "lx6",
+    "name": "Vanguard Sunglasses",
+    "category": "Accessories",
+    "price": 680,
+    "description": "Architectural frames carved from solid blocks of acetate. Featuring polarized gradient lenses.",
+    "image": "https://i.pinimg.com/1200x/5d/10/7c/5d107cefcd1df632e3d927caca4ae759.jpg",
+    "details": {
+      "Frame": "Hand-cut Acetate",
+      "Lenses": "Carl Zeiss Polarized",
+      "UV": "100% Protection"
+    }
+  },
+  {
+    "id": "lx7",
+    "name": "Titanium Edge Frame",
+    "category": "Watches",
+    "price": 6200,
+    "description": "Skeletonized dial revealing the intricate dance of time. Encased in ultra-light aerospace titanium.",
+    "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=2000&auto=format&fit=crop",
+    "details": {
+      "Dial": "Skeletonized",
+      "Material": "Aerospace Titanium",
+      "Crystal": "Sapphire"
+    }
+  },
+  {
+    "id": "lx8",
+    "name": "Obsidian Pearl Necklace",
+    "category": "Jewelry",
+    "price": 5400,
+    "description": "Rare Tahitian black pearls, hand-selected for their deep luster and unique overtones.",
+    "image": "https://i.pinimg.com/736x/58/d4/c0/58d4c0949f67c4f71c3402333ddf4124.jpg",
+    "details": {
+      "Pearls": "Tahitian Black",
+      "Clasp": "Platinum",
+      "Length": "45 cm"
+    }
+  }
+]

@@ -21,11 +21,11 @@ class ExperienceRepository(CRUDBase[Experience, ExperienceCreate, ExperienceUpda
         return db_obj
 
     async def get_multi_by_owner(
-        self, db: AsyncSession, *, owner_id: UUID, skip: int = 0, limit: int = 100
+        self, db: AsyncSession, *, owner_id: Optional[UUID] = None, skip: int = 0, limit: int = 100
     ) -> List[Experience]:
         result = await db.execute(
             select(Experience)
-            .where(Experience.user_id == owner_id)
+            .where(Experience.user_id == owner_id if owner_id else True)
             .offset(skip)
             .limit(limit)
         )

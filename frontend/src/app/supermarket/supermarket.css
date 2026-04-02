@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --sm-primary: #10B981;
+    --sm-primary-dark: #059669;
+    --sm-primary-light: #D1FAE5;
+    --sm-accent: #F59E0B;
+    --sm-bg: #FDFDFD;
+    --sm-surface: #FFFFFF;
+    --sm-text-main: #1F2937;
+    --sm-text-muted: #6B7280;
+    --sm-border: #F3F4F6;
+    --sm-font: 'Plus Jakarta Sans', sans-serif;
+}
+
+.supermarket-app {
+    font-family: var(--sm-font);
+    color: var(--sm-text-main);
+}
+
+.text-gradient-green {
+    background: linear-gradient(135deg, var(--sm-primary) 0%, var(--sm-primary-dark) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.shadow-premium {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-hover {
+    transition: all 0.3s ease;
+}
+
+.shadow-hover:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-4px);
+}
+
+/* Custom transitions */
+.page-transition-enter {
+    opacity: 0;
+    transform: translateY(10px);
+}
+.page-transition-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}

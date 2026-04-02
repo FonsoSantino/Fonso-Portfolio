@@ -1,0 +1,20 @@
+[
+  {
+    "id": "t1",
+    "name": "Alex 'The Titan' Volkov",
+    "specialty": "Powerlifting & Hypertrophy",
+    "image": "https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": "t2",
+    "name": "Sarah Coach",
+    "specialty": "HIIT & Performance Condition",
+    "image": "https://coachescornerfitness.com/wp-content/uploads/sites/249/2020/10/Girl-Barbell-Back-Squat.jpg"
+  },
+  {
+    "id": "t3",
+    "name": "Marcus Strong",
+    "specialty": "Boxing & Explosive Power",
+    "image": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?q=80&w=500&auto=format&fit=crop"
+  }
+]

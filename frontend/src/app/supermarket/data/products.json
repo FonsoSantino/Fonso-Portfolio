@@ -1,0 +1,205 @@
+[
+  {
+    "id": "f1",
+    "name": "Manzana Roja Premium",
+    "category": "frutas",
+    "price": 2.5,
+    "oldPrice": 3.2,
+    "unit": "kg",
+    "description": "Manzanas rojas crujientes y dulces, seleccionadas a mano de cultivos locales.",
+    "image": "https://media.istockphoto.com/id/583727108/es/foto/manzana-roja-madura-aislada-sobre-un-fondo-blanco.jpg?s=170667a&w=0&k=20&c=xJnXtLkIC79dEWBmid-Mqr1B4CA5B_2nXKifAoMPktY=",
+    "organic": true
+  },
+  {
+    "id": "f2",
+    "name": "Bananas de Exportación",
+    "category": "frutas",
+    "price": 1.8,
+    "unit": "kg",
+    "description": "Bananas maduras en su punto, ricas en potasio y perfectas para el día a día.",
+    "image": "https://th.bing.com/th/id/R.556937069c339cbfea8ad91ac54c0570?rik=a%2b9w5qWH1lM4rA&riu=http%3a%2f%2fpamsdailydish.com%2fwp-content%2fuploads%2f2015%2f04%2fBunch-Bananas-2.jpg&ehk=58pOED6p9l77ndP7z29CEym%2fTOahIZDhj2qd4Pj8dz8%3d&risl=&pid=ImgRaw&r=0",
+    "organic": false
+  },
+  {
+    "id": "f3",
+    "name": "Naranjas de Ombligo",
+    "category": "frutas",
+    "price": 1.2,
+    "oldPrice": 1.9,
+    "unit": "kg",
+    "description": "Naranjas jugosas, ideales para jugo fresco cada mañana.",
+    "image": "https://carrefourar.vtexassets.com/arquivos/ids/176868/2320006000001_02.jpg?v=637468574579430000",
+    "organic": false
+  },
+  {
+    "id": "f4",
+    "name": "Frutillas Silvestres",
+    "category": "frutas",
+    "price": 4.5,
+    "unit": "kg",
+    "description": "Frutillas rojas intensas, dulces y llenas de sabor natural.",
+    "image": "https://i.pinimg.com/originals/2d/a4/91/2da491226b8ebf3b19734159647d51fd.png",
+    "organic": true
+  },
+  {
+    "id": "f5",
+    "name": "Uvas Thompson",
+    "category": "frutas",
+    "price": 3.2,
+    "unit": "kg",
+    "description": "Uvas sin semilla, dulces y refrescantes para toda la familia.",
+    "image": "https://cprchile.cl/wp-content/uploads/2024/01/Uva-Thompson-Seedless.png",
+    "organic": false
+  },
+  {
+    "id": "v1",
+    "name": "Lechuga Mantecosa",
+    "category": "verduras",
+    "price": 1.5,
+    "oldPrice": 2.0,
+    "unit": "u",
+    "description": "Lechuga fresca y tierna, cosechada en el día para tus ensaladas.",
+    "image": "https://img.freepik.com/fotos-premium/lechuga-mantecosa-crujiente-alta-resolucion-sobre-fondo-blanco_1008992-1660.jpg",
+    "organic": true
+  },
+  {
+    "id": "v2",
+    "name": "Tomates Perita",
+    "category": "verduras",
+    "price": 2.2,
+    "unit": "kg",
+    "description": "Tomates rojos y firmes, perfectos para salsas o ensaladas frescas.",
+    "image": "https://th.bing.com/th/id/R.b23bae863e64e22bc95a0987acbe0869?rik=92SkRwv0FfEJOQ&pid=ImgRaw&r=0",
+    "organic": false
+  },
+  {
+    "id": "v3",
+    "name": "Zanahorias de Huerta",
+    "category": "verduras",
+    "price": 0.9,
+    "unit": "kg",
+    "description": "Zanahorias crujientes y dulces, esenciales para cualquier cocina.",
+    "image": "https://institutonutrigenomica.com/wp-content/uploads/2021/03/zanahorias.jpg",
+    "organic": true
+  },
+  {
+    "id": "v4",
+    "name": "Brócoli Fresco",
+    "category": "verduras",
+    "price": 1.8,
+    "unit": "u",
+    "description": "Brócoli de color verde intenso, lleno de vitaminas y minerales.",
+    "image": "https://s1.abcstatics.com/media/bienestar/2019/07/22/brocoli-beneficios-3-kk7H--1248x698@abc.jpg",
+    "organic": true
+  },
+  {
+    "id": "v5",
+    "name": "Palta Hass Premium",
+    "category": "verduras",
+    "price": 5.5,
+    "unit": "kg",
+    "description": "Paltas cremosas y en su punto justo de madurez.",
+    "image": "https://th.bing.com/th/id/R.2fa1347b9ed2d66e41337044f3dfe953?rik=EHvoA%2fUmY0mkrw&pid=ImgRaw&r=0",
+    "organic": true
+  },
+  {
+    "id": "b1",
+    "name": "Agua Mineral 1.5L",
+    "category": "bebidas",
+    "price": 0.8,
+    "unit": "u",
+    "description": "Agua mineral natural de manantial, purificada y refrescante.",
+    "image": "https://jumboargentina.vtexassets.com/arquivos/ids/545277/Agua-Baja-En-Sodio-Glaciar-15-L-2-237511.jpg?v=637014798216800000",
+    "organic": false
+  },
+  {
+    "id": "b2",
+    "name": "Coca-Cola Original 2.25L",
+    "category": "bebidas",
+    "price": 2.1,
+    "unit": "u",
+    "description": "El sabor clásico de Coca-Cola para compartir.",
+    "image": "https://i5.walmartimages.com.mx/gr/images/product-images/img_large/00750105530400L.jpg",
+    "organic": false
+  },
+  {
+    "id": "b3",
+    "name": "Jugo de Naranja 100% Puro",
+    "category": "bebidas",
+    "price": 3.5,
+    "unit": "u",
+    "description": "Jugo prensado en frío, sin conservantes ni azúcar agregada.",
+    "image": "https://resources.claroshop.com/medios-plazavip/mkt/63111b16aca0c_coscecha-pura-001png.jpg",
+    "organic": true
+  },
+  {
+    "id": "b4",
+    "name": "Vino Malbec Gran Reserva",
+    "category": "bebidas",
+    "price": 12.0,
+    "unit": "u",
+    "description": "Vino tinto Malbec de cuerpo intenso con notas frutales y roble.",
+    "image": "https://tse3.mm.bing.net/th/id/OIP.ljaeOzXwHtdyewZnztjl-QHaLH?rs=1&pid=ImgDetMain&o=7&rm=3",
+    "organic": false
+  },
+  {
+    "id": "o1",
+    "name": "Huevos de Campo Orgánicos",
+    "category": "organicos",
+    "price": 4.2,
+    "unit": "docena",
+    "description": "Huevos de gallinas libres de pastoreo, sin hormonas ni antibióticos.",
+    "image": "https://mediocampo.com/1640-large_default/huevos-de-campo-coeco-docena.jpg",
+    "organic": true
+  },
+  {
+    "id": "o2",
+    "name": "Miel de Abeja Pura",
+    "category": "organicos",
+    "price": 6.8,
+    "unit": "frasco",
+    "description": "Miel cruda de flores silvestres, recolectada de forma sostenible.",
+    "image": "https://mejorconsalud.as.com/wp-content/uploads/2016/04/Beneficios-de-la-miel.jpg",
+    "organic": true
+  },
+  {
+    "id": "o3",
+    "name": "Quinoa Real Orgánica",
+    "category": "organicos",
+    "price": 5.5,
+    "unit": "500g",
+    "description": "Súper alimento andino, lavado y listo para cocinar.",
+    "image": "https://www.tuttoquinoa.com/wp-content/uploads/2016/01/12-Quinoa-semi-1-scaled.jpg",
+    "organic": true
+  },
+  {
+    "id": "s1",
+    "name": "Papas Fritas Clásicas",
+    "category": "snacks",
+    "price": 1.5,
+    "unit": "u",
+    "description": "Papas seleccionadas fritas en aceite de girasol, sabor clásico.",
+    "image": "https://jumboargentina.vtexassets.com/arquivos/ids/615374/Papas-Fritas-Lay-s-Clasicas-48g-1-856025.jpg?v=637418712462400000",
+    "organic": false
+  },
+  {
+    "id": "s2",
+    "name": "Mix de Frutos Secos",
+    "category": "snacks",
+    "price": 4.8,
+    "unit": "250g",
+    "description": "Combinación perfecta de nueces, almendras, castañas y pasas.",
+    "image": "https://assets-global.website-files.com/6421ce75be42e6b8e2158e40/64c42c09af676d5308a7ecdc_64bf5d7041ec4e7c97dbe4bc_picture%2520(2).jpeg",
+    "organic": true
+  },
+  {
+    "id": "s3",
+    "name": "Chocolate Amargo 70% Cacao",
+    "category": "snacks",
+    "price": 3.2,
+    "unit": "u",
+    "description": "Chocolate premium con alto contenido de cacao para un sabor intenso.",
+    "image": "https://media.davida.com.co/897-large_default/cobertura-de-chocolate-amargo-70-cacao.jpg",
+    "organic": true
+  }
+]

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --if-primary: #E11D48; /* Intense Red (Rose 600) */
+    --if-primary-dark: #BE123C;
+    --if-bg: #000000;
+    --if-surface: #0A0A0A;
+    --if-surface-secondary: #121212;
+    --if-text: #FFFFFF;
+    --if-text-muted: #888888;
+    --if-border: #1F1F1F;
+    --if-font-header: 'Oswald', sans-serif;
+    --if-font-body: 'Inter', sans-serif;
+}
+
+.ironforge-app {
+    background-color: var(--if-bg);
+    color: var(--if-text);
+    font-family: var(--if-font-body);
+    -webkit-font-smoothing: antialiased;
+}
+
+.font-if-header {
+    font-family: var(--if-font-header);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.text-if-red {
+    color: var(--if-primary);
+}
+
+.bg-if-red {
+    background-color: var(--if-primary);
+}
+
+/* Intense contrast elements */
+.if-outline-text {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+    color: transparent;
+}
+
+.if-outline-text-red {
+    -webkit-text-stroke: 1px var(--if-primary);
+    color: transparent;
+}
+
+/* Animations */
+.if-hover-lift {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.if-hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -20px var(--if-primary);
+}
+
+.if-img-zoom {
+    transition: transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.group:hover .if-img-zoom {
+    transform: scale(1.1);
+}
+
+/* Custom transitions */
+.if-soft-reveal {
+    animation: ifReveal 1s ease-out forwards;
+}
+
+@keyframes ifReveal {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Scrollbar */
+.ironforge-app::-webkit-scrollbar {
+    width: 6px;
+}
+
+.ironforge-app::-webkit-scrollbar-track {
+    background: var(--if-bg);
+}
+
+.ironforge-app::-webkit-scrollbar-thumb {
+    background: var(--if-border);
+}
+
+.ironforge-app::-webkit-scrollbar-thumb:hover {
+    background: var(--if-primary);
+}
