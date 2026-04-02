@@ -39,34 +39,36 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
                 "relative flex min-h-screen flex-col w-full overflow-x-hidden transition-opacity duration-1000",
                 "opacity-100"
             )}>
-                <header className="sticky top-0 z-[100] w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-                    <div className="container px-4 flex h-16 items-center justify-between mx-auto">
-                        <div className="flex items-center">
-                            <Link href="/" className="mr-4 md:mr-8 flex items-center space-x-2 group shrink-0">
-                                <span className="font-black text-2xl tracking-tighter uppercase italic text-gradient group-hover:scale-105 transition-transform duration-300">
-                                    Fonso <span className="text-foreground">Dev</span>
-                                </span>
-                            </Link>
-                            <nav className="hidden md:flex items-center space-x-8 text-xs font-black uppercase tracking-[0.2em] italic">
-                                <Link href="/" className="transition-all hover:text-primary text-foreground/60 hover:-translate-y-0.5">{t('nav.home')}</Link>
-                                <Link href="/projects" className="transition-all hover:text-primary text-foreground/60 hover:-translate-y-0.5">{t('nav.projects')}</Link>
-                                <Link href="/experience" className="transition-all hover:text-primary text-foreground/60 hover:-translate-y-0.5">{t('nav.experience')}</Link>
-                                <Link href="/contact" className="transition-all hover:text-primary text-foreground/60 hover:-translate-y-0.5">{t('nav.contact')}</Link>
-                            </nav>
+                {(!isLoading || !isHome) && (
+                    <header className="sticky top-0 z-[100] w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+                        <div className="container px-4 flex h-16 items-center justify-between mx-auto">
+                            <div className="flex items-center">
+                                <Link href="/" className="mr-4 md:mr-8 flex items-center space-x-2 group shrink-0">
+                                    <span className="font-black text-2xl tracking-tighter uppercase italic text-gradient group-hover:scale-105 transition-transform duration-300">
+                                        Fonso <span className="text-foreground">Dev</span>
+                                    </span>
+                                </Link>
+                                <nav className="hidden md:flex items-center space-x-8 text-xs font-black uppercase tracking-[0.2em] italic">
+                                    <Link href="/" className="transition-all hover:text-primary text-foreground/60 hover:-translate-y-0.5">{t('nav.home')}</Link>
+                                    <Link href="/projects" className="transition-all hover:text-primary text-foreground/60 hover:-translate-y-0.5">{t('nav.projects')}</Link>
+                                    <Link href="/experience" className="transition-all hover:text-primary text-foreground/60 hover:-translate-y-0.5">{t('nav.experience')}</Link>
+                                    <Link href="/contact" className="transition-all hover:text-primary text-foreground/60 hover:-translate-y-0.5">{t('nav.contact')}</Link>
+                                </nav>
+                            </div>
+                            <div className="flex items-center space-x-2 md:space-x-4">
+                                <LanguageToggle />
+                                <ThemeToggle />
+                                {/* Mobile Hamburger Button */}
+                                <button 
+                                    className="md:hidden p-2 text-foreground/80 hover:text-foreground"
+                                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                                >
+                                    {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                                </button>
+                            </div>
                         </div>
-                        <div className="flex items-center space-x-2 md:space-x-4">
-                            <LanguageToggle />
-                            <ThemeToggle />
-                            {/* Mobile Hamburger Button */}
-                            <button 
-                                className="md:hidden p-2 text-foreground/80 hover:text-foreground"
-                                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            >
-                                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                            </button>
-                        </div>
-                    </div>
-                </header>
+                    </header>
+                )}
 
                 {/* Mobile Navigation Menu */}
                 <AnimatePresence>

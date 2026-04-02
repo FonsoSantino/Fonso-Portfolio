@@ -7,7 +7,7 @@ import { useCRM } from '../context/CRMContext';
 import {
   LayoutDashboard, Users, FolderKanban, FileText,
   CreditCard, MessageSquare, LogOut,
-  ChevronLeft, ChevronRight, ExternalLink
+  ChevronLeft, ChevronRight, ExternalLink, Menu, X
 } from 'lucide-react';
 
 const NAV_ITEMS = [
@@ -37,12 +37,36 @@ function NexoraLogo({ size = 32 }: { size?: number }) {
 
 export function Sidebar() {
   const [collapsed, setCollapsed] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
   const { user, logout, stats } = useCRM();
 
   return (
-    <aside
-      className="hidden md:flex flex-col flex-shrink-0 h-screen sticky top-0 transition-all duration-300 z-30"
+    <>
+      {/* Mobile Toggle Button */}
+      <button 
+        onClick={() => setMobileOpen(!mobileOpen)}
+        className="md:hidden fixed top-4 right-4 z-[70] p-2 rounded-xl backdrop-blur-md"
+        style={{
+            background: 'rgba(9, 7, 18, 0.8)',
+            border: '1px solid rgba(124, 58, 237, 0.2)',
+            color: 'white'
+        }}
+      >
+        {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+
+      {/* Mobile Backdrop */}
+      {mobileOpen && (
+        <div 
+            className="md:hidden fixed inset-0 z-[40] backdrop-blur-sm"
+            style={{ background: 'rgba(0,0,0,0.6)' }}
+            onClick={() => setMobileOpen(false)}
+        />
+      )}
+
+      <aside
+        className={`flex-col flex-shrink-0 h-screen sticky top-0 transition-all duration-300 z-50 ${mobileOpen ? 'flex fixed left-0 shadow-2xl' : 'hidden md:flex'}`}
       style={{
         width: collapsed ? 72 : 248,
         background: 'rgba(9, 7, 18, 0.97)',
@@ -158,5 +182,6 @@ export function Sidebar() {
         </div>
       </div>
     </aside>
+    </>
   );
 }

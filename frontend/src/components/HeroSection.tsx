@@ -14,8 +14,6 @@ export function HeroSection() {
     const { scrollY } = useScroll()
     
     const yParallax = useTransform(scrollY, [0, 500], [0, 150])
-    const opacityHero = useTransform(scrollY, [0, 300], [1, 0])
-    const scaleHero = useTransform(scrollY, [0, 300], [1, 0.9])
 
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
@@ -90,8 +88,8 @@ export function HeroSection() {
             </div>
 
             <motion.div 
-                style={{ y: yParallax, opacity: opacityHero, scale: scaleHero }}
-                className="container relative z-10 px-6 mx-auto text-center"
+                style={{ y: yParallax }}
+                className="container relative z-20 px-6 mx-auto text-center"
             >
                 <motion.div
                     variants={containerVariants}
@@ -160,11 +158,11 @@ export function HeroSection() {
                             <Button
                                 asChild
                                 variant="outline"
-                                className="h-16 md:h-20 px-8 md:px-12 rounded-full bg-white/5 backdrop-blur-xl border-zinc-200 dark:border-white/10 hover:border-primary/50 text-foreground dark:text-white font-black uppercase italic tracking-[0.2em] md:tracking-[0.4em] hover:-translate-y-2 transition-all duration-500 w-full md:w-auto text-[10px] md:text-xs"
+                                className="h-16 md:h-20 px-8 md:px-12 rounded-full bg-white/5 backdrop-blur-xl border-zinc-200 dark:border-white/10 hover:border-primary/50 text-foreground dark:text-white font-black uppercase italic tracking-[0.2em] md:tracking-[0.4em] hover:-translate-y-2 transition-all duration-500 w-full md:w-auto text-[10px] md:text-xs pointer-events-auto"
                             >
-                                <Link href="/contact">
+                                <a href="#contact">
                                     {t('hero.cta_contact')}
-                                </Link>
+                                </a>
                             </Button>
                         </div>
                     </motion.div>
@@ -173,7 +171,7 @@ export function HeroSection() {
 
 
             {/* Section Fade */}
-            <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-background via-background/80 to-transparent z-10" />
+            <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-background via-background/80 to-transparent z-10 pointer-events-none" />
         </section>
     )
 }

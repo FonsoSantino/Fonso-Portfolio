@@ -33,13 +33,14 @@ export const ServicesSection = () => {
     ]
 
     return (
-        <section id="services" className="scroll-mt-32 w-full py-16 md:py-32 px-4 bg-background relative z-20">
+        <section id="services" className="scroll-mt-32 w-full py-8 md:py-32 px-4 bg-background relative z-20">
             <div className="container mx-auto">
                 {/* Section Header */}
                 <div className="flex flex-col mb-16 md:mb-24">
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
                         className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-black uppercase tracking-[0.3em] italic mb-6 w-fit"
                     >
                         {t('services.badge')}
@@ -63,6 +64,7 @@ export const ServicesSection = () => {
                             key={service.id}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
                             transition={{ delay: i * 0.1, duration: 0.6 }}
                             className="group relative p-8 md:p-10 rounded-3xl md:rounded-[3.5rem] bg-black/5 dark:bg-white/[0.02] border border-black/10 dark:border-white/5 hover:border-primary/40 dark:hover:border-primary/40 transition-all duration-700 hover:-translate-y-2 shadow-2xl overflow-hidden"
                         >
@@ -103,6 +105,7 @@ export const ServicesSection = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
                         transition={{ delay: services.length * 0.1, duration: 0.6 }}
                         className="group relative p-8 md:p-10 rounded-3xl md:rounded-[3.5rem] bg-primary text-black flex flex-col justify-center items-center text-center shadow-2xl hover:scale-[1.02] transition-all duration-500 cursor-pointer overflow-hidden min-h-[300px]"
                         onClick={() => router.push('/contact')}
