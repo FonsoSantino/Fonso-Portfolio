@@ -9,15 +9,23 @@ import { usePathname } from 'next/navigation';
 import { useLanguage } from '@/context/LanguageContext';
 import { LanguageToggle } from "@/components/LanguageToggle"
 import { AnimatePresence, motion } from 'framer-motion';
-import { Github, Linkedin, Instagram } from "lucide-react"
-
+import { Github, Linkedin, Instagram, Menu, X } from "lucide-react"
 export function ClientLayout({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
     const { t } = useLanguage();
     const isHome = pathname === '/';
     const isDemo = pathname.startsWith('/demos') || pathname.startsWith('/soluciones-forestales') || pathname.startsWith('/supermarket') || pathname.startsWith('/luxora') || pathname.startsWith('/ironforge') || pathname.startsWith('/crm');
     const [isLoading, setIsLoading] = useState(isHome);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+    // Lock body scroll when mobile menu is open
+    useEffect(() => {
+        if (isMobileMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }, [isMobileMenuOpen]);
     if (isDemo) {
         return <main className="flex-1 overflow-x-hidden">{children}</main>;
     }
@@ -28,10 +36,10 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
                 {isLoading && isHome && <SplashScreen key="splash" finishLoading={() => setIsLoading(false)} />}
             </AnimatePresence>
             <div className={cn(
-                "relative flex min-h-screen flex-col transition-opacity duration-1000",
+                "relative flex min-h-screen flex-col w-full overflow-x-hidden transition-opacity duration-1000",
                 "opacity-100"
             )}>
-                <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+                <header className="sticky top-0 z-[100] w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
                     <div className="container px-4 flex h-16 items-center justify-between mx-auto">
                         <div className="flex items-center">
                             <Link href="/" className="mr-4 md:mr-8 flex items-center space-x-2 group shrink-0">
@@ -46,12 +54,50 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
                                 <Link href="/contact" className="transition-all hover:text-primary text-foreground/60 hover:-translate-y-0.5">{t('nav.contact')}</Link>
                             </nav>
                         </div>
-                        <div className="flex items-center space-x-4">
+                        <div className="flex items-center space-x-2 md:space-x-4">
                             <LanguageToggle />
                             <ThemeToggle />
+                            {/* Mobile Hamburger Button */}
+                            <button 
+                                className="md:hidden p-2 text-foreground/80 hover:text-foreground"
+                                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            >
+                                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                            </button>
                         </div>
                     </div>
                 </header>
+
+                {/* Mobile Navigation Menu */}
+                <AnimatePresence>
+                    {isMobileMenuOpen && (
+                        <motion.div
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            className="fixed inset-0 top-16 z-[90] bg-background/95 backdrop-blur-xl border-b md:hidden flex flex-col pt-12 px-6 h-[calc(100vh-4rem)] overflow-y-auto"
+                        >
+                            <nav className="flex flex-col space-y-8 text-2xl font-black uppercase tracking-[0.2em] italic text-center">
+                                <Link onClick={() => setIsMobileMenuOpen(false)} href="/" className="transition-all hover:text-primary text-foreground/80">{t('nav.home')}</Link>
+                                <Link onClick={() => setIsMobileMenuOpen(false)} href="/projects" className="transition-all hover:text-primary text-foreground/80">{t('nav.projects')}</Link>
+                                <Link onClick={() => setIsMobileMenuOpen(false)} href="/experience" className="transition-all hover:text-primary text-foreground/80">{t('nav.experience')}</Link>
+                                <Link onClick={() => setIsMobileMenuOpen(false)} href="/contact" className="transition-all hover:text-primary text-foreground/80">{t('nav.contact')}</Link>
+                            </nav>
+                            
+                            <div className="mt-auto pb-12 pt-12 flex justify-center gap-6 border-t mt-12">
+                                <a href="https://github.com/fonsosantino" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-primary/10 text-primary">
+                                    <Github size={24} />
+                                </a>
+                                <a href="https://linkedin.com/in/fonsosantino" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-primary/10 text-primary">
+                                    <Linkedin size={24} />
+                                </a>
+                                <a href="https://instagram.com/fonsosantino" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-primary/10 text-primary">
+                                    <Instagram size={24} />
+                                </a>
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
 
                 <main className="flex-1 relative">
                     <AnimatePresence mode="wait">

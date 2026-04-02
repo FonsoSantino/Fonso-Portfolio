@@ -142,52 +142,53 @@ export function ProjectGrid() {
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95, y: 40 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.95, y: 40 }}
-                            className="relative w-full max-w-6xl h-full max-h-[85vh] bg-zinc-900 rounded-[4rem] border border-white/10 overflow-hidden flex flex-col md:flex-row shadow-[0_50px_100px_rgba(0,0,0,0.8)]"
+                            className="relative w-full max-w-6xl h-full max-h-[85vh] md:max-h-[85vh] bg-zinc-900 rounded-[2rem] md:rounded-[4rem] border border-white/10 overflow-hidden flex flex-col md:flex-row shadow-2xl md:shadow-[0_50px_100px_rgba(0,0,0,0.8)]"
                         >
                             <button 
                                 onClick={() => setSelectedProject(null)}
-                                className="absolute top-8 right-8 z-30 w-12 h-12 rounded-full bg-white/5 hover:bg-white hover:text-black transition-all flex items-center justify-center"
+                                className="absolute top-4 right-4 md:top-8 md:right-8 z-30 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/50 md:bg-white/5 backdrop-blur-md text-white hover:bg-white hover:text-black transition-all flex items-center justify-center border border-white/10"
                             >
                                 <X size={20} />
                             </button>
 
                             {/* Left: Visual */}
-                            <div className="md:w-1/2 relative bg-black">
+                            <div className="h-64 md:h-auto min-h-[250px] md:w-1/2 relative bg-black shrink-0">
                                 <Image 
                                     src={selectedProject.image_url}
                                     alt=""
                                     fill
+                                    sizes="(max-width: 768px) 100vw, 50vw"
                                     className="object-cover opacity-60"
+                                    priority
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-r from-zinc-900 via-transparent to-transparent z-10" />
-                                <div className="absolute bottom-12 left-12 z-20 space-y-4">
-                                    <div className="flex gap-2">
+                                <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-zinc-900 via-zinc-900/50 md:via-transparent to-transparent z-10" />
+                                <div className="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-20 space-y-2 md:space-y-4">
+                                    <div className="flex flex-wrap gap-2">
                                         {selectedProject.tags.map((tag: string) => (
                                             <span key={tag} className="px-3 py-1 bg-white/10 backdrop-blur-md rounded-lg text-[8px] font-black uppercase tracking-widest text-white/60">{tag}</span>
                                         ))}
                                     </div>
-                                    <h2 className="text-7xl font-black uppercase italic tracking-tighter text-white leading-none">
+                                    <h2 className="text-4xl md:text-7xl font-black uppercase italic tracking-tighter text-white leading-none">
                                         {selectedProject.title}
                                     </h2>
                                 </div>
                             </div>
 
                             {/* Right: Data */}
-                            <div className="flex-1 p-12 overflow-y-auto space-y-12">
-                                <div className="space-y-6">
+                            <div className="flex-1 p-6 md:p-12 overflow-y-auto space-y-8 md:space-y-12 bg-zinc-900 relative z-20">
+                                <div className="space-y-4 md:space-y-6">
                                     <label className="text-[10px] font-black uppercase tracking-[0.4em] text-primary italic">
                                         {t('projects.modal_description_label')}
                                     </label>
-                                    <p className="text-2xl font-light italic text-white/60 leading-relaxed border-l-2 border-primary/30 pl-8">
+                                    <p className="text-lg md:text-2xl font-light italic text-white/60 leading-relaxed border-l-2 border-primary/30 pl-4 md:pl-8">
                                         {t(`projects.items.${selectedProject.id}.description`) !== `projects.items.${selectedProject.id}.description`
                                             ? t(`projects.items.${selectedProject.id}.description`)
                                             : selectedProject.description}
                                     </p>
                                 </div>
 
-                                <div className="grid grid-cols-2 gap-8">
-                                    <div className="space-y-4 bg-white/5 p-6 rounded-3xl border border-white/5">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                                    <div className="space-y-4 bg-white/5 p-5 md:p-6 rounded-2xl md:rounded-3xl border border-white/5">
                                         <div className="flex items-center gap-3 text-white/40">
                                             <Terminal size={14} className="text-primary" />
                                             <span className="text-[10px] font-black uppercase tracking-widest">{t('projects.modal_logs_label')}</span>
@@ -217,7 +218,7 @@ export function ProjectGrid() {
                                     </div>
                                 </div>
 
-                                <div className="pt-8">
+                                <div className="pt-4 md:pt-8 mt-auto">
                                     <Button
                                         onClick={() => {
                                             if (selectedProject.demo_url) {
@@ -227,7 +228,7 @@ export function ProjectGrid() {
                                                 notify(t('projects.modal_restricted'), 'error')
                                             }
                                         }}
-                                        className="w-full h-20 rounded-[2rem] bg-primary hover:bg-primary/80 text-white font-black uppercase italic tracking-[0.3em] text-xs shadow-2xl transition-all"
+                                        className="w-full h-16 md:h-20 rounded-2xl md:rounded-[2rem] bg-primary hover:bg-primary/80 text-white font-black uppercase italic tracking-[0.2em] md:tracking-[0.3em] text-[10px] md:text-xs shadow-xl transition-all"
                                     >
                                         {t('projects.modal_open_btn')}
                                     </Button>

@@ -37,11 +37,10 @@ export function HeroSection() {
     }
 
     const itemVariants = {
-        hidden: { opacity: 0, y: 40, filter: "blur(10px)" },
+        hidden: { opacity: 0, y: 40 },
         visible: { 
             opacity: 1, 
             y: 0, 
-            filter: "blur(0px)",
             transition: { 
                 type: "spring", 
                 damping: 20, 
@@ -53,15 +52,18 @@ export function HeroSection() {
     return (
         <section ref={containerRef} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 perspective-1000">
             {/* Cinematic Background */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 overflow-hidden">
+                {/* Mobile Fallback */}
+                <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent md:hidden" />
+                
                 <motion.div 
-                    className="absolute inset-0 opacity-30 dark:opacity-20"
+                    className="hidden md:block absolute inset-0 opacity-30 dark:opacity-20"
                     style={{
                         background: `radial-gradient(circle 800px at ${mousePos.x}px ${mousePos.y}px, rgba(var(--primary-rgb), 0.15), transparent 80%)`
                     }}
                 />
                 <div 
-                    className="absolute top-0 left-0 w-full h-full opacity-[0.05] [mask-image:radial-gradient(ellipse_at_center,white,transparent_80%)]" 
+                    className="hidden md:block absolute top-0 left-0 w-full h-full opacity-[0.05] [mask-image:radial-gradient(ellipse_at_center,white,transparent_80%)]" 
                     style={{
                         backgroundImage: `linear-gradient(to right, #808080 1px, transparent 1px), linear-gradient(to bottom, #808080 1px, transparent 1px)`,
                         backgroundSize: '32px 32px'
@@ -75,7 +77,7 @@ export function HeroSection() {
                         scale: [1, 1.1, 1],
                     }}
                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]"
+                    className="hidden md:block absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]"
                 />
                 <motion.div 
                     animate={{ 
@@ -83,7 +85,7 @@ export function HeroSection() {
                         scale: [1, 1.2, 1],
                     }}
                     transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                    className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[100px]"
+                    className="hidden md:block absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[100px]"
                 />
             </div>
 
