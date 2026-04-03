@@ -84,7 +84,7 @@ export function HeroSection() {
                         scale: [1, 1.2, 1],
                     }}
                     transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                    className="hidden md:block absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[100px]"
+                    className="hidden md:block absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-yellow-500/5 rounded-full blur-[100px]"
                 />
             </div>
 

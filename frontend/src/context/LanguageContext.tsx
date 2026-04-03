@@ -194,7 +194,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
                         role: "Fundador de Startup",
                         text: "Excelente trabajo, muy profesional. El resultado superó mis expectativas en diseño y funcionalidad.",
                         initials: "LM",
-                        color: "from-violet-500 to-purple-600",
+                        color: "from-yellow-400 to-amber-600",
                         stars: 5
                     },
                     {
@@ -431,7 +431,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
                         role: "Startup Founder",
                         text: "Excellent work, very professional. The result exceeded my expectations in both design and functionality.",
                         initials: "LM",
-                        color: "from-violet-500 to-purple-600",
+                        color: "from-yellow-400 to-amber-600",
                         stars: 5
                     },
                     {

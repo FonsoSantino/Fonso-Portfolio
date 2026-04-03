@@ -119,7 +119,7 @@ export const TechStack = () => {
                                 
                                 {/* Hover Glow Effect */}
                                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/[0.03] transition-colors duration-500" />
-                                <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-purple-500/20 rounded-[2.6rem] blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-yellow-500/20 rounded-[2.6rem] blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                                 <div className="relative z-10 flex flex-col items-center gap-4 md:gap-6">
                                     <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">

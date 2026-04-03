@@ -20,7 +20,7 @@ export default function ExperiencePage() {
             {/* Ambient Background */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-[20%] right-[10%] w-[50%] h-[50%] bg-primary/5 rounded-full blur-[120px]" />
-                <div className="absolute bottom-[10%] left-[10%] w-[40%] h-[40%] bg-purple-500/5 rounded-full blur-[100px]" />
+                <div className="absolute bottom-[10%] left-[10%] w-[40%] h-[40%] bg-yellow-500/5 rounded-full blur-[100px]" />
             </div>
 
             <div className="container px-4 py-24 md:py-32 relative z-10 mx-auto">
